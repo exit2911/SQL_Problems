@@ -10,3 +10,16 @@ ordered from the most recent to the oldest
 */
 
 
+/*groupby from 1 table*/
+
+
+
+
+select user_id,training_date, count(training_date) as count
+from trainingDetails
+group by user_id,training_date
+having count(training_date) > 1
+order by training_date desc
+;
+
+
