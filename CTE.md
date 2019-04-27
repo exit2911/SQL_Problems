@@ -1,6 +1,6 @@
 
 common table expression
-
+return the 5th highest salary without using top
 
 
 
