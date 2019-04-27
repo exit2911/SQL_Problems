@@ -10,7 +10,7 @@ ordered from the most recent to the oldest
 */
 
 
-/*groupby from 1 table*/
+/*groupby from 1 table without usernames*/
 
 
 
@@ -23,3 +23,12 @@ order by training_date desc
 ;
 
 
+
+/*groupby from 2 table*/
+
+select t.user_id,c.username, training_date, count(training_date) as count
+from customers c join trainingDetails t on t.user_id = c.user_id 
+group by t.user_id,training_date, c.username
+having count(training_date) > 1
+order by training_date desc
+;
