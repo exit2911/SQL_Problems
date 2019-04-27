@@ -1,5 +1,6 @@
 select last item in a column. applys to all kinds of values. doesn't have to be numeric
 
+max is not being used
 
 
 
