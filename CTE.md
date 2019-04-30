@@ -17,3 +17,22 @@ FROM
   Salaries
 WHERE
    RowNum <= 5
+
+/*2nd example*/
+declare @N int
+set @N = 5;
+
+with cte as
+
+(
+
+	select user_training_id,training_date,user_id,training_id, rn = row_number()
+	over (order by training_date desc)
+	from trainingDetails
+
+)
+
+select user_training_id, training_date, training_id
+
+from cte
+where rn = @N
