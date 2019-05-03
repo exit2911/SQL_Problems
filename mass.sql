@@ -1,4 +1,4 @@
-/*truncate and converting*/
+/*truncate to show the kg and gm seperately*/
 create table mass
 
 (weight nvarchar(50));
