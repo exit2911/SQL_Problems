@@ -8,6 +8,5 @@ insert into mass values (5.67);
 insert into mass values (34.567);
 insert into mass values (365.253);
 insert into mass values (34);
-
-select weight, trunc(weight) as kg, nvl(substr(weight - trunc(weight), 2), 0) as gms
-from mass_table;
+                 
+select weight, round(weight,0,2) as kg, (weight - round(weight,0,2))*100 as g from mass;
