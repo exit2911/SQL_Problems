@@ -16,7 +16,7 @@ SELECT
 FROM
   Salaries
 WHERE
-   RowNum <= 5
+   RowNum = 5
 
 /*2nd example*/
 declare @N int
